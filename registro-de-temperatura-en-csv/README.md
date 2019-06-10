@@ -14,8 +14,6 @@ Envio de datos de sensor LDR y humedad conectados a las entradas analógicas de 
 
 ## Programación
 
-Descripción interesante sobre la programación
-
 ```python
 # Programa en python
 rom time import sleep, strftime, time
@@ -44,14 +42,13 @@ arduino.close()
 ```
 
 ```arduino
-// Programa en arduino
 void setup () {
   Serial.begin(9600);
 }
 
 void loop () {
   int luz = analogRead(0);
-  int humedad = analogRead(0) + 150;
+  int humedad = analogRead(1);
   
   String cadena = String(luz) + ',' + String(humedad);
   Serial.println(cadena);
